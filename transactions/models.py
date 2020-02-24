@@ -7,7 +7,7 @@ class Flow(models.TextChoices):
 
 class Category(models.TextChoices):
     GROCERIES = 'groceries', 'groceries'
-    SALARY = '"salary",', '"salary",'
+    SALARY = 'salary', 'salary'
     TRANSFER = 'transfer', 'transfer'
     RENT = 'rent', 'rent'
     SAVINGS = 'savings', 'savings'

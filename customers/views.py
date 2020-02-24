@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions, status
+from rest_framework import viewsets, permissions, status, mixins
 from customers.models import Customer
 from customers.serializers import CustomerSerializer
 from rest_framework import permissions
@@ -7,7 +7,12 @@ from rest_framework.decorators import action
 from transactions.serializers import TransactionSerializer
 from rest_framework.response import Response
 
-class CustomerViewSet(viewsets.ModelViewSet):
+class CustomerViewSet(
+    mixins.CreateModelMixin, 
+    mixins.RetrieveModelMixin, 
+    mixins.ListModelMixin,
+    viewsets.GenericViewSet,
+):
     permission_classes = [permissions.IsAuthenticated]
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
