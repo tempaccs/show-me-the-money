@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from rest_framework import viewsets
+from transactions.models import Transaction
+from transactions.serializers import TransactionSerializer
+from rest_framework import permissions
 
+class TransactionViewSet(viewsets.ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = Transaction.objects.all()
+    serializer_class = TransactionSerializer
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
