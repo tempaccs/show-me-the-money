@@ -1,17 +1,20 @@
 from django.db import models
 from customers.models import Customer
 
+
 class Flow(models.TextChoices):
-    OUTFLOW = 'outflow', 'outflow'
-    INFLOW = 'inflow', 'inflow'
+    OUTFLOW = "outflow", "outflow"
+    INFLOW = "inflow", "inflow"
+
 
 class Category(models.TextChoices):
-    GROCERIES = 'groceries', 'groceries'
-    SALARY = 'salary', 'salary'
-    TRANSFER = 'transfer', 'transfer'
-    RENT = 'rent', 'rent'
-    SAVINGS = 'savings', 'savings'
-    OTHER = 'other', 'other'
+    GROCERIES = "groceries", "groceries"
+    SALARY = "salary", "salary"
+    TRANSFER = "transfer", "transfer"
+    RENT = "rent", "rent"
+    SAVINGS = "savings", "savings"
+    OTHER = "other", "other"
+
 
 class Transaction(models.Model):
     reference = models.CharField(max_length=10, unique=True)

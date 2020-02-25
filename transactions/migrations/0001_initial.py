@@ -9,21 +9,54 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('customers', '0001_initial'),
+        ("customers", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Transaction',
+            name="Transaction",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('reference', models.CharField(max_length=10, unique=True)),
-                ('account', models.CharField(max_length=10)),
-                ('date', models.DateField()),
-                ('amount', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('type', models.CharField(choices=[('outflow', 'outflow'), ('inflow', 'inflow')], max_length=20)),
-                ('category', models.CharField(choices=[('groceries', 'groceries'), ('"salary",', '"salary",'), ('transfer', 'transfer'), ('rent', 'rent'), ('savings', 'savings'), ('other', 'other')], max_length=20)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='customers.Customer')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("reference", models.CharField(max_length=10, unique=True)),
+                ("account", models.CharField(max_length=10)),
+                ("date", models.DateField()),
+                ("amount", models.DecimalField(decimal_places=2, max_digits=10)),
+                (
+                    "type",
+                    models.CharField(
+                        choices=[("outflow", "outflow"), ("inflow", "inflow")],
+                        max_length=20,
+                    ),
+                ),
+                (
+                    "category",
+                    models.CharField(
+                        choices=[
+                            ("groceries", "groceries"),
+                            ('"salary",', '"salary",'),
+                            ("transfer", "transfer"),
+                            ("rent", "rent"),
+                            ("savings", "savings"),
+                            ("other", "other"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="customers.Customer",
+                    ),
+                ),
             ],
         ),
     ]
