@@ -8,7 +8,9 @@ Build with docker
 docker-compose up
 ```
 You can access the server on http://localhost:8000.
-To see all available endpoints, check out redoc: http://localhost:8000/redoc.
+
+## Endpoints
+See http://localhost:8000/redoc.
 
 ## Things to improve
 - CI, GitHub flows etc
