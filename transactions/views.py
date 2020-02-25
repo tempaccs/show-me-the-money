@@ -18,6 +18,11 @@ class TransactionViewSet(
         responses={status.HTTP_201_CREATED: TransactionSerializer(many=True)},
     )
     def create(self, request):
+        """
+        Bulk creation
+
+        create multiple transactions at once
+        """
         serializer = TransactionSerializer(many=True, data=request.data)
         serializer.is_valid(raise_exception=True)
         transactions = serializer.save()
