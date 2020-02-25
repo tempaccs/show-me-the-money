@@ -2,28 +2,28 @@
 
 ![alt text](https://media.giphy.com/media/9HQRIttS5C4Za/giphy.gif)
 
-## Build
+### Build
 Build with docker
 ```bash
 docker-compose build
 ```
 
-## Run
+### Run
 Build with docker
 ```bash
 docker-compose up
 ```
 You can access the server on http://localhost:8000.
 
-## Tests
+### Tests
 ```bash
 docker-compose run web python manage.py test
 ```
 
-## Endpoints
+### Endpoints
 See http://localhost:8000/redoc.
 
-## Things to improve
+### Things to improve
 - CI, GitHub flows etc
 - descriptions for model fields
 - testing the validation error in `transactions` doesnt work, even though it works in practice
