@@ -1,7 +1,3 @@
-TODO:
-- run migrations on start
-- linting
-
 ### Things to improve
 - CI, GitHub flows etc
 - descriptions for model fields
