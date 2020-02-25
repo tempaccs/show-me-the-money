@@ -1,4 +1,16 @@
-### Things to improve
+# Show-Me-The-Money
+
+![alt text](https://media.giphy.com/media/9HQRIttS5C4Za/giphy.gif)
+
+## Build
+Build with docker
+```bash
+docker-compose up
+```
+You can access the server on http://localhost:8000.
+To see all available endpoints, check out redoc: http://localhost:8000/redoc.
+
+## Things to improve
 - CI, GitHub flows etc
 - descriptions for model fields
 - testing the validation error in `transactions` doesnt work, even though it works in practice
