@@ -2,10 +2,16 @@
 
 ![alt text](https://media.giphy.com/media/9HQRIttS5C4Za/giphy.gif)
 
-## Build + Run
+## Build
 Build with docker
 ```bash
-docker-compose
+docker-compose build
+```
+
+## Run
+Build with docker
+```bash
+docker-compose up
 ```
 You can access the server on http://localhost:8000.
 
