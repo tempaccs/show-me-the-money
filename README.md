@@ -17,7 +17,7 @@ The first time you need to run
 ```
 docker-compose run web python manage.py createsuperuser
 ```
-to create a user.
+to create a user, which you can use for authentication.
 
 ### Tests
 ```bash
