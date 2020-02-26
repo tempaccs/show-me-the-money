@@ -13,6 +13,12 @@ docker-compose up
 ```
 You can access the server on http://localhost:8000.
 
+The first time you need to run
+```
+docker-compose run web python manage.py createsuperuser
+```
+to create a user.
+
 ### Tests
 ```bash
 docker-compose run web python manage.py test
