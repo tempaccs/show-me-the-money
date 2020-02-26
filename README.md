@@ -22,18 +22,11 @@ docker-compose run web python manage.py test
 See http://localhost:8000/redoc.
 
 ### Authentication
-docker automaticly creates you a user:
-- username: `admin`
-- password: `welcome`
-
-These credentials can be used for basic auth.
-
-You may create more user with 
+create a user with 
 ```
 docker-compose run web python manage.py createsuperuser
 ```
-or via localhost:8000/admin.
-
+this user can be used for basic auth.
 
 ### Things to improve
 - GitHub flows etc
