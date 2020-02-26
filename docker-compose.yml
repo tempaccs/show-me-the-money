@@ -5,10 +5,13 @@ services:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=postgres
+      - DJANGO_SUPERUSER_PASSWORD=welcome
+      - DJANGO_SUPERUSER_USERNAME_FIELD=root
   web:
     build: .
     command: >
       bash -c "python manage.py migrate
+      && echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@localhost', 'welcome')\" | python manage.py shell
       && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code

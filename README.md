@@ -13,12 +13,6 @@ docker-compose up
 ```
 You can access the server on http://localhost:8000.
 
-The first time you need to run
-```
-docker-compose run web python manage.py createsuperuser
-```
-to create a user, which you can use for authentication.
-
 ### Tests
 ```bash
 docker-compose run web python manage.py test
@@ -26,6 +20,20 @@ docker-compose run web python manage.py test
 
 ### Endpoints
 See http://localhost:8000/redoc.
+
+### Authentication
+docker automaticly creates you a user:
+- username: `admin`
+- password: `welcome`
+
+These credentials can be used for basic auth.
+
+You may create more user with 
+```
+docker-compose run web python manage.py createsuperuser
+```
+or via localhost:8000/admin.
+
 
 ### Things to improve
 - GitHub flows etc
