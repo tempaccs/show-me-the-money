@@ -1,4 +1,4 @@
-# Show-Me-The-Money [![Codeship Status for tempaccs/show-me-the-money](https://app.codeship.com/projects/d4b21e10-3ac1-0138-6216-72327eda91a4/status?branch=master)](https://app.codeship.com/projects/386930)
+# Show-Me-The-Money [![Codeship Status for tempaccs/show-me-the-money](https://app.codeship.com/projects/d4b21e10-3ac1-0138-6216-72327eda91a4/status?branch=master)](https://app.codeship.com/projects/386930) [![codecov](https://codecov.io/gh/tempaccs/show-me-the-money/branch/master/graph/badge.svg)](https://codecov.io/gh/tempaccs/show-me-the-money)
 
 ![alt text](https://media.giphy.com/media/9HQRIttS5C4Za/giphy.gif)
 

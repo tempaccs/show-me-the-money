@@ -9,3 +9,5 @@ web:
     && python manage.py runserver 0.0.0.0:8000"
   depends_on:
     - db
+  encrypted_env_file:
+    - codecov.env.encrypted
