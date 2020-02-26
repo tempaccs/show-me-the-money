@@ -1,0 +1,6 @@
+- name: Quality Control
+  type: parallel
+  steps:
+  - name: tests
+    service: web
+    command: python manage.py test

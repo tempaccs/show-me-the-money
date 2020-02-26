@@ -22,7 +22,7 @@ docker-compose run web python manage.py test
 See http://localhost:8000/redoc.
 
 ### Things to improve
-- CI, GitHub flows etc
+- GitHub flows etc
 - descriptions for model fields
 - testing the validation error in `transactions` doesnt work, even though it works in practice
 - tests in `transaction` and `customers` should test directly the views, not via the URL
